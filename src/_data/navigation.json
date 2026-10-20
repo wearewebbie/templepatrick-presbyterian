@@ -4,12 +4,11 @@
         "url": "/"
     },
     {
-        "label": "Link One",
-        "url": "/page-one/"
+        "label": "What's On",
+        "url": "/whats-on/"
     },
     {
-        "label": "Contact",
-        "url": "/contact/",
-        "type": "cta"
+        "label": "Contact Us",
+        "url": "/contact/"
     }
 ]

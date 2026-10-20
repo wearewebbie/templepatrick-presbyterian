@@ -61,7 +61,6 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/svgs");
     eleventyConfig.addPassthroughCopy("src/assets/favicon");
     eleventyConfig.addPassthroughCopy("src/assets/fonts");
-    eleventyConfig.addPassthroughCopy("src/assets/swiper");
     eleventyConfig.addPassthroughCopy("src/assets/images/website-preview-image.png");
 
     return {

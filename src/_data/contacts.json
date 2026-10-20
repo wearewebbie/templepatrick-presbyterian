@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Rev. Richard C Kerr",
+        "title": "Minister/Moderator",
+        "info": "Currently serving as Moderator of the Presbyterian Church in Ireland. For enquiries, please use either of the contact email addresses above or contact Rev. Graeme Read directly.",
+        "image": "src/assets/images/contact-rev-richard.png"
+    },
+    {
+        "name": "Rev. Graeme Read",
+        "title": "Minister",
+        "info": "750 Antrim Road, Templepatrick, Ballyclare, BT39 0AP<br>Phone: 07933 558186<br>Email: gread@presbyterianireland.org",
+        "image": "src/assets/images/contact-rev-graeme.png"
+    }
+]

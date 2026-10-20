@@ -32,15 +32,13 @@
   {%- endif %}
 
   <!-- Icons -->
-  INSERT THE CODE THAT https://realfavicongenerator.net/ GENERATED FOR YOUR SITE HERE
+  {%- if site.logoIcon %}
+  <link rel="icon" type="image/svg+xml" href="{{ site.logoIcon }}">
+  {%- endif %}
   <meta name="theme-color" content="#ffffff">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/bundle.css">
-
-  <!-- Swiper -->
-  <link rel="stylesheet" href="/assets/swiper/swiper-bundle.min.css" />
-  <script src="/assets/swiper/swiper-bundle.min.js" defer></script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -62,6 +60,16 @@
   {%- endif %}
   {%- if site.email %},
   "email": "{{ site.email }}"
+  {%- endif %}
+  {%- if site.address %},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.address.street }}",
+    "addressLocality": "{{ site.address.locality }}",
+    "addressRegion": "{{ site.address.region }}",
+    "postalCode": "{{ site.address.postcode }}",
+    "addressCountry": "{{ site.address.country }}"
+  }
   {%- endif %}
   {%- if site.social and site.social | length %},
   "sameAs": [

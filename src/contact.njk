@@ -1,10 +1,53 @@
 ---
 layout: base/base.njk
-title: ""
-description: ""
+title: "Contact Us"
+description: "Get in touch with Templepatrick Presbyterian Church"
+permalink: /contact/index.html
 ---
-
-<section>
-    </br>
-    <h1>This is to showcase how the cta link is highlighted in the nav</h1>
+<div class="flex flex-col gap-[60px] pt-[40px]">
+<div class="px-[40px]">
+    <div class="relative">
+        {% image "src/assets/images/contact-background-header.png", "", "block h-auto w-full", { sizes: "100vw", widths: [800, 1200, 1600, 2400] } %}
+        <h1 class="heading-1-bold absolute inset-[0px] z-[1] flex items-center justify-center text-center text-white">{{ title }}</h1>
+    </div>
+</div>
+<section class="px-[40px]">
+        <div class="container">
+               <div class="flex flex-col gap-[50px]">
+    <div class="flex flex-col">
+    <h2 class="heading-4-bold text-navy">Email Us</h2>
+        <p class="body-text text-navy">For more information or for general enquiries contact <a href="mailto:office@templepatrickpci.org" class="underline">office@templepatrickpci.org</a></p>
+    </div>
+    <div class="flex flex-col gap-[40px] xl:flex-row">
+        {%- for contact in contacts %}
+        <div class="flex flex-1 flex-row gap-[24px]">
+            {%- if contact.image %}
+            <div class="h-[240px] w-[200px] shrink-0">
+                {% image contact.image, contact.name, "block h-full w-full object-cover", { sizes: "200px", widths: [200, 400] } %}
+            </div>
+            {%- else %}
+            <div class="h-[240px] w-[200px] shrink-0 bg-gray-200" role="img" aria-label="{{ contact.name }}"></div>
+            {%- endif %}
+            <div class="flex flex-col gap-[12px]">
+                <h3 class="heading-5-bold text-navy">{{ contact.name }}</h3>
+                <p class="body-medium text-navy">{{ contact.title }}</p>
+                <p class="body-normal text-gray">{{ contact.info | safe }}</p>
+            </div>
+        </div>
+        {%- endfor %}
+    </div>
+    </div>
+    </div>
 </section>
+<section class="px-[40px]">
+        <div class="container">
+               <div class="flex flex-col gap-[50px]">
+    <div class="flex flex-col">
+    <h2 class="heading-4-bold text-navy">Find Us</h2>
+        <p class="body-text text-navy">{{ site.address.street }}, {{ site.address.locality }}, {{ site.address.region }} {{ site.address.postcode }}</p>
+    </div>
+    <iframe class="block h-[450px] w-full border-0" title="Map of {{ site.title }}" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2215.5096973594455!2d-6.0437727!3d54.6995754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861a8ef605b2bed%3A0xebdbe155cfb7985b!2sTemplepatrick%20Presbyterian%20Church!5e0!3m2!1sen!2suk!4v1792514459785!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    </div>
+</section>
+</div>
