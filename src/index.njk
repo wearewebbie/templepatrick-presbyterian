@@ -4,8 +4,80 @@ title: "Home"
 description: "Welcome to Templepatrick Presbyterian Church"
 permalink: index.html
 ---
-<section>
-    <h1>Templepatrick Presbyterian Church</h1>
-    <p>Welcome to our church family. Find out what's on and how to get in touch.</p>
-    <p><a href="/whats-on/">See what's on</a> or <a href="/contact/">contact us</a>.</p>
+<div class="flex flex-col pt-[40px]">
+<div class="px-[40px]">
+    <div class="relative h-[calc(100vh-80px)] overflow-hidden rounded-[20px]">
+        {% image "src/assets/images/index-background-header.webp", "", "absolute inset-[0px] block h-full w-full object-cover", { sizes: "100vw", widths: [800, 1200, 1600, 2400] } %}
+        <div class="absolute inset-[0px] bg-navy/70"></div>
+        <div class="absolute inset-[0px] z-[1] flex flex-col items-center justify-center gap-[40px] text-center text-white">
+            <div class="flex flex-col items-center gap-[8px]">
+                <p class="[font-family:Poppins] text-[20px] font-normal md:text-[32px] not-italic leading-[100%] tracking-[0%] text-center">Welcome to</p>
+                <h1 class="[font-family:Adonis] text-[28px] font-bold md:text-[56px] lg:text-[80px] not-italic leading-[100%] tracking-[0%] text-center uppercase">Templepatrick<br>Presbyterian</h1>
+            </div>
+            <p class="[font-family:Poppins] text-[16px] font-normal md:text-[24px] not-italic leading-[100%] tracking-[0%] text-center">“To know God; and to make God better known”</p>
+        </div>
+    </div>
+</div>
+<section class="px-[40px] py-[100px] text-navy">
+    <div class="container">
+        <div class="flex flex-col gap-[30px]">
+            <h2 class="heading-2-bold">A Sunday with Us</h2>
+            <div class="flex flex-col gap-[40px]">
+                <div class="grid grid-cols-1 gap-[40px] lg:grid-cols-3">
+                    <div class="flex flex-col gap-[12px] rounded-[12px]">
+                        <h3 class="heading-5-bold">Morning Service</h3>
+                        <p class="text-[16px] font-normal leading-[24px] text-gray">Every Sunday at 11am, with Bible Class for Year 8-12, Creche for children up to age 3 and Sunday school for everyone in-between.</p>
+                    </div>
+                    <div class="flex flex-col gap-[12px] rounded-[12px]">
+                        <h3 class="heading-5-bold">Evening Service</h3>
+                        <p class="text-[16px] font-normal leading-[24px] text-gray">On the first Sunday of every month in the Church Building at 7.00pm, covering topics similar to that of the morning service in a deeper way.</p>
+                    </div>
+                    <div class="flex flex-col gap-[12px] rounded-[12px]">
+                        <h3 class="heading-5-bold">Praise Night</h3>
+                        <p class="text-[16px] font-normal leading-[24px] text-gray">An evening of praise, fellowship and discussion on the third Sunday of every month in the Main Hall, with tea and coffee from 6.30pm.</p>
+                    </div>
+                </div>
+                <p class="w-full text-[16px] font-normal leading-[24px] text-gray">Before our Morning service we offer a time of Prayer in the Crèche from 10.15am to 10.30am, along with fellowship over tea and coffee after the service. For those who cannot make it, we also live-stream our Morning Service and Evening Service. You can catch-up on YouTube <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" class="underline">HERE</a>.</p>
+            </div>
+        </div>
+    </div>
 </section>
+<section class="px-[40px]">
+    <div class="rounded-[40px] bg-[#04182B] px-[40px] text-mint-white py-[100px]">
+        <div class="container">
+            <div class="flex flex-col gap-[30px]">
+                <h2 class="heading-2-bold">About Us</h2>
+                <div class="flex flex-col gap-[20px]">
+                    <p class="w-full text-[16px] font-normal leading-[24px]">We are a family of people seeking to grow in our relationship with God, discover more of His grace for living and encourage others to explore what it means to be a follower of Jesus Christ.</p>
+                    <p class="w-full text-[16px] font-normal leading-[24px]">Sunday services are an opportunity to meet together as a community to worship God. Our emphasis is on seeing God's Word applied to daily living. Events and organisations throughout the week complement this. We trust you will find a home with us and a space to nurture your faith.</p>
+                    <p class="w-full text-[16px] font-normal leading-[24px]">May you know God's richest blessing. Richard Kerr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="px-[40px] py-[100px] text-navy">
+    <div class="container">
+        <div class="flex flex-col gap-[30px]">
+            <div class="flex items-center justify-between">
+                <h2 class="[font-family:Adonis] text-[40px] font-bold not-italic leading-[93%] tracking-[0%] text-center">Follow Us</h2>
+                <div class="flex items-center gap-[20px]">
+                    <a href="{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <img src="/assets/svgs/facebook-navy.svg" alt="" width="24" height="24">
+                    </a>
+                    <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img src="/assets/svgs/instagram-navy.svg" alt="" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3">
+                {%- for n in [1, 2, 3] %}
+                <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" class="block aspect-square overflow-hidden">
+                    {% image "src/assets/images/events/instagram/instagram-" + n + ".webp", "Instagram post " + n, "block h-full w-full object-cover", { sizes: "33vw", widths: [400, 800] } %}
+                </a>
+                {%- endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+</div>

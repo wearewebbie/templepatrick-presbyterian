@@ -4,7 +4,67 @@ title: "What's On"
 description: "Services, groups and events at Templepatrick Presbyterian Church"
 permalink: /whats-on/index.html
 ---
-<section>
-    <h1>What's On</h1>
-    <p>Details of our services, groups and events will appear here.</p>
+<div class="flex flex-col pt-[40px]">
+<div class="px-[40px]">
+    <div class="relative aspect-[1432/400] overflow-hidden rounded-[20px]">
+        {% image "src/assets/images/whatson-background-header.webp", "", "absolute inset-[0px] block h-full w-full object-cover", { sizes: "100vw", widths: [800, 1200, 1600, 2400] } %}
+        <div class="absolute inset-[0px] bg-navy/70"></div>
+        <h1 class="heading-1-bold absolute inset-[0px] z-[1] flex items-center justify-center text-center text-white">{{ title }}</h1>
+    </div>
+</div>
+<section class="px-[40px]">
+    <div class="container">
+        <div class="mb-[20px] flex flex-wrap gap-[8px]" role="group" aria-label="Filter events">
+            {%- for tab in ["All", "Adults", "Youth", "Children"] %}
+            <button type="button" data-filter="{{ tab }}" aria-pressed="{{ 'true' if loop.first else 'false' }}"
+                class="cursor-pointer rounded-[8px] px-[20px] py-[4px] {{ 'bg-navy text-white' if loop.first else 'text-navy' }}">{{ tab }}</button>
+            {%- endfor %}
+        </div>
+        <div class="grid grid-cols-1 gap-[20px] md:grid-cols-2 xl:grid-cols-3">
+            {%- for event in events %}
+            <article data-tag="{{ event.tag }}" class="flex flex-col overflow-hidden rounded-[12px] bg-[#FFFFFF]">
+                <div class="relative h-[260px] w-full">
+                    {% image event.image, event.title, "absolute inset-[0px] block h-full w-full object-cover", { sizes: "(min-width: 1024px) 33vw, 100vw", widths: [400, 800] } %}
+                </div>
+                <div class="flex flex-col gap-[4px] p-[30px]">
+                    <h2 class="heading-5-bold text-navy">{{ event.title }}</h2>
+                    {%- if event.what %}
+                    <p class="text-[16px] font-normal leading-[24px] text-gray">What: {{ event.what }}</p>
+                    {%- endif %}
+                    {%- if event.when %}
+                    <p class="text-[16px] font-normal leading-[24px] text-gray">When: {{ event.when }}</p>
+                    {%- endif %}
+                    {%- if event.where %}
+                    <p class="text-[16px] font-normal leading-[24px] text-gray">Where: {{ event.where }}</p>
+                    {%- endif %}
+                    {%- if event.contact %}
+                    <p class="text-[16px] font-normal leading-[24px] text-gray">Contact: {{ event.contact }}</p>
+                    {%- endif %}
+                </div>
+            </article>
+            {%- endfor %}
+        </div>
+    </div>
 </section>
+</div>
+<script>
+    (function () {
+        var tabs = document.querySelectorAll("[data-filter]");
+        var cards = document.querySelectorAll("[data-tag]");
+        tabs.forEach(function (tab) {
+            tab.addEventListener("click", function () {
+                var filter = tab.getAttribute("data-filter");
+                tabs.forEach(function (t) {
+                    var active = t === tab;
+                    t.setAttribute("aria-pressed", active ? "true" : "false");
+                    t.classList.toggle("bg-navy", active);
+                    t.classList.toggle("text-white", active);
+                    t.classList.toggle("text-navy", !active);
+                });
+                cards.forEach(function (card) {
+                    card.classList.toggle("hidden", filter !== "All" && card.getAttribute("data-tag") !== filter);
+                });
+            });
+        });
+    })();
+</script>

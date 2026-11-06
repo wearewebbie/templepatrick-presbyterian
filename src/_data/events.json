@@ -1,0 +1,141 @@
+[
+    {
+        "title": "Bible Study Group",
+        "tag": "Adults",
+        "image": "src/assets/images/events/bible-study-group.jpg",
+        "what": "Studying the Bible together",
+        "when": "2nd Tuesday of the month, 8pm",
+        "where": "Minor Hall",
+        "contact": "Richard Kerr"
+    },
+    {
+        "title": "Bowling Club",
+        "tag": "Adults",
+        "image": "src/assets/images/events/bowling-club.png",
+        "what": "Indoor bowls for all ages",
+        "when": "Wednesday evenings 7:30pm",
+        "where": "Main Hall",
+        "contact": "Matt McNeilly"
+    },
+    {
+        "title": "Boys’ Brigade",
+        "tag": "Children",
+        "image": "src/assets/images/events/boys-brigade.png",
+        "what": "Activities within a BB award programme",
+        "when": "Tuesday and Thursday evenings",
+        "where": "Church Halls",
+        "contact": "Paul Lynas"
+    },
+    {
+        "title": "Choir",
+        "tag": "Adults",
+        "image": "src/assets/images/events/choir.png",
+        "what": "Church Choir Practices",
+        "when": "2nd Thursday of the month at 8.00pm",
+        "where": "Church Building / Minor Hall",
+        "contact": "Roberta Stinson"
+    },
+    {
+        "title": "DORCAS",
+        "tag": "Adults",
+        "image": "src/assets/images/events/dorcas.png",
+        "what": "Outreach related to Craft and Stitches",
+        "when": "Every Tuesday morning 10am - 12noon",
+        "where": "Main Hall",
+        "contact": "Yvonne McDonald"
+    },
+    {
+        "title": "Edge",
+        "tag": "Youth",
+        "image": "src/assets/images/events/edge.png",
+        "what": "Events for those secondary school age",
+        "when": "2nd Sunday evening of the month, 7pm",
+        "where": "Church Halls",
+        "contact": "Gemma Ferguson"
+    },
+    {
+        "title": "Friendship Circle",
+        "tag": "Adults",
+        "image": "src/assets/images/events/friendship-circle.png",
+        "what": "Friendship Circle",
+        "when": "1st Thursday of the month at 2.30pm",
+        "where": "Minor Hall",
+        "contact": "Katie Orme, Anne Hamill, Linda McMullan"
+    },
+    {
+        "title": "Girls’ Brigade",
+        "tag": "Children",
+        "image": "src/assets/images/events/girls-brigade.jpg",
+        "what": "Activities within a GB award programme",
+        "when": "Monday evenings",
+        "where": "Church Halls",
+        "contact": "Fiona Lynas"
+    },
+    {
+        "title": "Holiday Bible Club",
+        "tag": "Children",
+        "image": "src/assets/images/events/holiday-bible.webp",
+        "what": "Five days of fun, learning about Jesus. For anyone going into P1 until age 12",
+        "where": "Church Halls",
+        "contact": "Gemma Ferguson (07745 124195)"
+    },
+    {
+        "title": "Ladies’ Night",
+        "tag": "Adults",
+        "image": "src/assets/images/events/ladies-night.png",
+        "what": "Opportunities for ladies to get together",
+        "contact": "Brenda Kerr, Audrey Heslip, Heather Wilson"
+    },
+    {
+        "title": "Mens’ Night",
+        "tag": "Adults",
+        "image": "src/assets/images/events/mens-night.png",
+        "what": "Opportunities for men to get together",
+        "contact": "Richard Kerr"
+    },
+    {
+        "title": "N:Gage Youth Club",
+        "tag": "Youth",
+        "image": "src/assets/images/events/n-gage-youth-club.png",
+        "what": "Evening of fun for young people P7+",
+        "when": "Alternate Saturdays of the month, 7.30pm",
+        "where": "Church Halls",
+        "contact": "Richard Kerr"
+    },
+    {
+        "title": "Presbyterian Women",
+        "tag": "Adults",
+        "image": "src/assets/images/events/presbyterian-women.jpeg",
+        "what": "Presbyterian Women",
+        "when": "3rd Tuesday of the month at 7.45pm",
+        "where": "Minor Hall",
+        "contact": "Roberta Stinson or Doreen Pitts"
+    },
+    {
+        "title": "Temple Tots",
+        "tag": "Children",
+        "image": "src/assets/images/events/temple-tots.png",
+        "what": "Space for pre-school children, parents, grandparents & carers to meet together",
+        "when": "Monday mornings from 10am - 12noon",
+        "where": "Main Hall",
+        "contact": "Lesley Allen"
+    },
+    {
+        "title": "Young People Discipleship Group",
+        "tag": "Youth",
+        "image": "src/assets/images/events/young-people-discipleship-group.png",
+        "what": "Bible Study for those aged 16+",
+        "when": "4th Sunday of the Month, 7pm",
+        "where": "The Manse",
+        "contact": "Richard Kerr"
+    },
+    {
+        "title": "Women’s Bible Study",
+        "tag": "Adults",
+        "image": "src/assets/images/events/women-s-bible-study.png",
+        "what": "Informal Bible Study with coffee and crèche",
+        "when": "Usually two Friday mornings a month",
+        "where": "East Room",
+        "contact": "Sarah Woodside"
+    }
+]

@@ -4,7 +4,7 @@ title: "Contact Us"
 description: "Get in touch with Templepatrick Presbyterian Church"
 permalink: /contact/index.html
 ---
-<div class="flex flex-col gap-[60px] pt-[40px]">
+<div class="flex flex-col pt-[40px]">
 <div class="px-[40px]">
     <div class="relative">
         {% image "src/assets/images/contact-background-header.png", "", "block h-auto w-full", { sizes: "100vw", widths: [800, 1200, 1600, 2400] } %}
@@ -20,15 +20,15 @@ permalink: /contact/index.html
     </div>
     <div class="flex flex-col gap-[40px] xl:flex-row">
         {%- for contact in contacts %}
-        <div class="flex flex-1 flex-row gap-[24px]">
+        <div class="flex flex-1 flex-row gap-[24px] overflow-hidden rounded-[20px] bg-[#FFFFFF]">
             {%- if contact.image %}
-            <div class="h-[240px] w-[200px] shrink-0">
-                {% image contact.image, contact.name, "block h-full w-full object-cover", { sizes: "200px", widths: [200, 400] } %}
+            <div class="relative min-h-[240px] w-[200px] shrink-0">
+                {% image contact.image, contact.name, "absolute inset-[0px] block h-full w-full object-cover", { sizes: "200px", widths: [200, 400] } %}
             </div>
             {%- else %}
-            <div class="h-[240px] w-[200px] shrink-0 bg-gray-200" role="img" aria-label="{{ contact.name }}"></div>
+            <div class="min-h-[240px] w-[200px] shrink-0 bg-gray-200" role="img" aria-label="{{ contact.name }}"></div>
             {%- endif %}
-            <div class="flex flex-col gap-[12px]">
+            <div class="flex flex-col gap-[12px] py-[20px] pr-[20px]">
                 <h3 class="heading-5-bold text-navy">{{ contact.name }}</h3>
                 <p class="body-medium text-navy">{{ contact.title }}</p>
                 <p class="body-normal text-gray">{{ contact.info | safe }}</p>

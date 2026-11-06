@@ -1,10 +1,10 @@
-<header class="absolute top-[80px] left-[0px] z-10 flex w-full items-center gap-[24px] bg-transparent px-[100px]">
+<header class="absolute top-[80px] left-[0px] z-10 flex w-full flex-col items-center gap-[24px] bg-transparent px-[20px] lg:flex-row lg:px-[100px]">
     <a href="/" aria-label="{{ site.title }} home" class="shrink-0">
         <img src="{{ site.logo }}" alt="{{ site.title }}" width="200" height="58">
     </a>
 
-    <nav class="ml-auto">
-        <ul class="flex items-center gap-[60px]">
+    <nav class="lg:ml-auto">
+        <ul class="flex flex-wrap items-center justify-center gap-[24px] lg:flex-nowrap lg:gap-[60px]">
             {%- for item in navigation %}
             {%- set isCurrent = false %}
             {%- if item.url == '/' %}
