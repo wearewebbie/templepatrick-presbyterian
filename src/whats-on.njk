@@ -4,15 +4,15 @@ title: "What's On"
 description: "Services, groups and events at Templepatrick Presbyterian Church"
 permalink: /whats-on/index.html
 ---
-<div class="flex flex-col pt-[40px]">
-<div class="px-[40px]">
-    <div class="relative aspect-[1432/400] overflow-hidden rounded-[20px]">
+<div class="flex flex-col pt-[0px] md:pt-[40px]">
+<div class="px-[0px] md:px-[40px]">
+    <div class="relative h-[260px] overflow-hidden rounded-[0px] md:rounded-[20px] lg:aspect-[1432/400] lg:h-auto">
         {% image "src/assets/images/whatson-background-header.webp", "", "absolute inset-[0px] block h-full w-full object-cover", { sizes: "100vw", widths: [800, 1200, 1600, 2400] } %}
         <div class="absolute inset-[0px] bg-navy/70"></div>
-        <h1 class="heading-1-bold absolute inset-[0px] z-[1] flex items-center justify-center text-center text-white">{{ title }}</h1>
+        <h1 class="heading-1-bold absolute inset-[0px] z-[1] flex items-center justify-center px-[20px] text-center text-white">{{ title }}</h1>
     </div>
 </div>
-<section class="px-[40px] pt-[60px]">
+<section class="px-[10px] md:px-[40px] pt-[60px]">
     <div class="container">
         <div class="mb-[20px] flex flex-wrap gap-[8px]" role="group" aria-label="Filter events">
             {%- for tab in ["All", "Adults", "Youth", "Children"] %}

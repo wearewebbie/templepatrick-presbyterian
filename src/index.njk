@@ -4,12 +4,12 @@ title: "Home"
 description: "Welcome to Templepatrick Presbyterian Church"
 permalink: index.html
 ---
-<div class="flex flex-col pt-[40px]">
-<div class="px-[40px]">
-    <div class="relative h-[calc(100vh-80px)] overflow-hidden rounded-[20px]">
+<div class="flex flex-col pt-[0px] md:pt-[40px]">
+<div class="px-[0px] md:px-[40px]">
+    <div class="relative h-[calc(100vh-80px)] overflow-hidden rounded-[0px] md:rounded-[20px]">
         {% image "src/assets/images/index-background-header.webp", "", "absolute inset-[0px] block h-full w-full object-cover", { sizes: "100vw", widths: [800, 1200, 1600, 2400] } %}
         <div class="absolute inset-[0px] bg-navy/70"></div>
-        <div class="absolute inset-[0px] z-[1] flex flex-col items-center justify-center gap-[40px] text-center text-white">
+        <div class="absolute inset-[0px] z-[1] flex flex-col items-center justify-center gap-[40px] px-[20px] text-center text-white">
             <div class="flex flex-col items-center gap-[8px]">
                 <p class="[font-family:Poppins] text-[20px] font-normal md:text-[32px] not-italic leading-[100%] tracking-[0%] text-center">Welcome to</p>
                 <h1 class="[font-family:Adonis] text-[28px] font-bold md:text-[56px] lg:text-[80px] not-italic leading-[100%] tracking-[0%] text-center uppercase">Templepatrick<br>Presbyterian</h1>
@@ -18,7 +18,7 @@ permalink: index.html
         </div>
     </div>
 </div>
-<section class="px-[40px] py-[100px] text-navy">
+<section class="px-[10px] md:px-[40px] py-[100px] text-navy">
     <div class="container">
         <div class="flex flex-col gap-[30px]">
             <h2 class="heading-2-bold">A Sunday with Us</h2>
@@ -42,7 +42,7 @@ permalink: index.html
         </div>
     </div>
 </section>
-<section class="px-[40px]">
+<section class="px-[10px] md:px-[40px]">
     <div class="rounded-[40px] bg-[#04182B] px-[40px] text-mint-white py-[100px]">
         <div class="container">
             <div class="flex flex-col gap-[30px]">
@@ -56,7 +56,7 @@ permalink: index.html
         </div>
     </div>
 </section>
-<section class="px-[40px] py-[100px] text-navy">
+<section class="px-[10px] md:px-[40px] py-[100px] text-navy">
     <div class="container">
         <div class="flex flex-col gap-[30px]">
             <div class="flex items-center justify-between">
@@ -71,7 +71,7 @@ permalink: index.html
                 </div>
             </div>
             <div class="grid grid-cols-1 gap-[40px] md:grid-cols-2 lg:grid-cols-3">
-                {%- for n in [1, 2, 3] %}
+                {%- for n in [1, 2, 3, 4, 5, 6] %}
                 <a href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" class="block aspect-square overflow-hidden">
                     {% image "src/assets/images/events/instagram/instagram-" + n + ".webp", "Instagram post " + n, "block h-full w-full object-cover", { sizes: "33vw", widths: [400, 800] } %}
                 </a>

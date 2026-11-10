@@ -4,14 +4,14 @@ title: "Contact Us"
 description: "Get in touch with Templepatrick Presbyterian Church"
 permalink: /contact/index.html
 ---
-<div class="flex flex-col pt-[40px]">
-<div class="px-[40px]">
-    <div class="relative">
-        {% image "src/assets/images/contact-background-header.png", "", "block h-auto w-full", { sizes: "100vw", widths: [800, 1200, 1600, 2400] } %}
-        <h1 class="heading-1-bold absolute inset-[0px] z-[1] flex items-center justify-center text-center text-white">{{ title }}</h1>
+<div class="flex flex-col pt-[0px] md:pt-[40px]">
+<div class="px-[0px] md:px-[40px]">
+    <div class="relative h-[260px] overflow-hidden lg:aspect-[1432/400] lg:h-auto">
+        {% image "src/assets/images/contact-background-header.png", "", "absolute inset-[0px] block h-full w-full object-cover", { sizes: "100vw", widths: [800, 1200, 1600, 2400] } %}
+        <h1 class="heading-1-bold absolute inset-[0px] z-[1] flex items-center justify-center px-[20px] text-center text-white">{{ title }}</h1>
     </div>
 </div>
-<section class="px-[40px] pt-[60px]">
+<section class="px-[10px] md:px-[40px] pt-[60px]">
         <div class="container">
                <div class="flex flex-col gap-[50px]">
     <div class="flex flex-col">
@@ -39,7 +39,7 @@ permalink: /contact/index.html
     </div>
     </div>
 </section>
-<section class="px-[40px]">
+<section class="px-[10px] md:px-[40px]">
         <div class="container">
                <div class="flex flex-col gap-[50px]">
     <div class="flex flex-col">

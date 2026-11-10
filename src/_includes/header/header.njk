@@ -1,10 +1,26 @@
-<header class="absolute top-[80px] left-[0px] z-10 flex w-full flex-col items-center gap-[24px] bg-transparent px-[20px] lg:flex-row lg:px-[100px]">
-    <a href="/" aria-label="{{ site.title }} home" class="shrink-0">
-        <img src="{{ site.logo }}" alt="{{ site.title }}" width="200" height="58">
+<header class="absolute top-[20px] md:top-[80px] left-[0px] z-10 flex w-full items-center justify-between gap-[24px] bg-transparent px-[20px] md:px-[60px] lg:px-[100px]">
+    <a href="/" aria-label="{{ site.title }} home" class="relative z-[2] min-w-0">
+        <img src="{{ site.logo }}" alt="{{ site.title }}" width="200" height="58" class="h-auto max-w-full">
     </a>
 
-    <nav class="lg:ml-auto">
-        <ul class="flex flex-wrap items-center justify-center gap-[24px] lg:flex-nowrap lg:gap-[60px]">
+    <button type="button" id="menu-toggle" class="relative z-[2] shrink-0 cursor-pointer text-white lg:hidden" aria-label="Open menu"
+        aria-expanded="false" aria-controls="site-nav">
+        <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            aria-hidden="true">
+            <line x1="5" y1="5" x2="19" y2="19" />
+            <line x1="19" y1="5" x2="5" y2="19" />
+        </svg>
+    </button>
+
+    <nav id="site-nav" class="invisible pointer-events-none fixed inset-[0px] z-[1] flex items-center justify-center bg-navy p-[20px] opacity-0 transition-[opacity,visibility] duration-300 ease-in-out lg:pointer-events-auto lg:visible lg:static lg:ml-auto lg:block lg:bg-transparent lg:p-[0px] lg:opacity-100 lg:transition-none">
+        <ul class="flex flex-col items-center gap-[32px] text-[24px] lg:flex-row lg:gap-[60px] lg:text-[16px]">
             {%- for item in navigation %}
             {%- set isCurrent = false %}
             {%- if item.url == '/' %}
@@ -39,3 +55,31 @@
         </ul>
     </nav>
 </header>
+
+<script>
+    (function () {
+        var toggle = document.getElementById("menu-toggle");
+        var nav = document.getElementById("site-nav");
+        var iconOpen = document.getElementById("menu-icon-open");
+        var iconClose = document.getElementById("menu-icon-close");
+
+        function setOpen(open) {
+            toggle.setAttribute("aria-expanded", open ? "true" : "false");
+            toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+            nav.classList.toggle("invisible", !open);
+            nav.classList.toggle("pointer-events-none", !open);
+            nav.classList.toggle("opacity-0", !open);
+            nav.classList.toggle("opacity-100", open);
+            iconOpen.classList.toggle("hidden", open);
+            iconClose.classList.toggle("hidden", !open);
+            document.body.classList.toggle("overflow-hidden", open);
+        }
+
+        toggle.addEventListener("click", function () {
+            setOpen(toggle.getAttribute("aria-expanded") !== "true");
+        });
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") setOpen(false);
+        });
+    })();
+</script>
